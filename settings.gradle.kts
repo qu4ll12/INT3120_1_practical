@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "BusinessCard"
 include(":app")
+include(":affirmations")
+include(":courses")
