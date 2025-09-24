@@ -23,3 +23,5 @@ rootProject.name = "BusinessCard"
 include(":app")
 include(":affirmations")
 include(":courses")
+include(":absolutelayoutdemo")
+include(":unit2_pathway1_diceroller")

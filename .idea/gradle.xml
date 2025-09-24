@@ -10,8 +10,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/absolutelayoutdemo" />
             <option value="$PROJECT_DIR$/affirmations" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/courses" />
+            <option value="$PROJECT_DIR$/unit2_pathway1_diceroller" />
           </set>
         </option>
       </GradleProjectSettings>
