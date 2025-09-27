@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">unit2_pathway2_diceroller</string>
+    <string name="roll">Roll</string>
 </resources>

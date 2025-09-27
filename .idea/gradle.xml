@@ -10,16 +10,17 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/absolutelayoutdemo" />
-            <option value="$PROJECT_DIR$/affirmations" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/courses" />
-            <option value="$PROJECT_DIR$/demo" />
-            <option value="$PROJECT_DIR$/musicdemo" />
-            <option value="$PROJECT_DIR$/unit1_pathway1_helloworld" />
-            <option value="$PROJECT_DIR$/unit2_pathway1_diceroller" />
+            <option value="$PROJECT_DIR$/unit1_pathway2_firstandroidapp" />
+            <option value="$PROJECT_DIR$/unit1_pathway3_businessapp" />
+            <option value="$PROJECT_DIR$/unit1_pathway3_composearticle" />
+            <option value="$PROJECT_DIR$/unit1_pathway3_composequadrant" />
+            <option value="$PROJECT_DIR$/unit1_pathway3_happybirthday" />
+            <option value="$PROJECT_DIR$/unit1_pathway3_taskmanager" />
             <option value="$PROJECT_DIR$/unit2_pathway2_diceroller" />
-            <option value="$PROJECT_DIR$/unit2_pathway2_lemonade" />
+            <option value="$PROJECT_DIR$/unit2_pathway3_artspace" />
+            <option value="$PROJECT_DIR$/unit2_pathway3_calculator" />
+            <option value="$PROJECT_DIR$/unit2_pathway3_customtipcalculator" />
           </set>
         </option>
       </GradleProjectSettings>

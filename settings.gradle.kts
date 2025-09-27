@@ -19,14 +19,15 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BusinessCard"
+rootProject.name = "Mobile Homework"
 include(":app")
-include(":affirmations")
-include(":courses")
-include(":absolutelayoutdemo")
-include(":unit2_pathway1_diceroller")
-include(":unit2_pathway2_lemonade")
-include(":demo")
-include(":musicdemo")
-include(":unit1_pathway1_helloworld")
+include(":unit1_pathway2_firstandroidapp")
+include(":unit1_pathway3_happybirthday")
+include(":unit1_pathway3_composearticle")
+include(":unit1_pathway3_taskmanager")
+include(":unit1_pathway3_composequadrant")
+include(":unit1_pathway3_businessapp")
 include(":unit2_pathway2_diceroller")
+include(":unit2_pathway3_calculator")
+include(":unit2_pathway3_customtipcalculator")
+include(":unit2_pathway3_artspace")

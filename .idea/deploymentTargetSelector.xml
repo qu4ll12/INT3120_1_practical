@@ -5,34 +5,43 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="affirmations">
+      <SelectionState runConfigName="firstandroidapp">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="courses">
+      <SelectionState runConfigName="unit1_pathway2_firstandroidapp">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="absolutelayoutdemo">
+      <SelectionState runConfigName="unit1_pathway1_firstandroidapp">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="unit2_pathway1_diceroller">
+      <SelectionState runConfigName="happybirthday">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="unit2_pathway2_lemonade">
+      <SelectionState runConfigName="unit1_pathway3_happybirthday">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="demo">
+      <SelectionState runConfigName="unit1_pathway3_composearticle">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="musicdemo">
+      <SelectionState runConfigName="unit1_pathway3_taskmanager">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="unit1_pathway1_helloworld">
+      <SelectionState runConfigName="unit1_pathway3_composequadrant">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="MainActivity">
+      <SelectionState runConfigName="unit1_pathway3_businessapp">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
       <SelectionState runConfigName="unit2_pathway2_diceroller">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="unit2_pathway3_calculator">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="unit2_pathway3_customtipcalculator">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="unit2_pathway3_artspace">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
