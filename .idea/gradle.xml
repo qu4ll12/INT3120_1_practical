@@ -14,7 +14,11 @@
             <option value="$PROJECT_DIR$/affirmations" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/courses" />
+            <option value="$PROJECT_DIR$/demo" />
+            <option value="$PROJECT_DIR$/musicdemo" />
+            <option value="$PROJECT_DIR$/unit1_pathway1_helloworld" />
             <option value="$PROJECT_DIR$/unit2_pathway1_diceroller" />
+            <option value="$PROJECT_DIR$/unit2_pathway2_diceroller" />
             <option value="$PROJECT_DIR$/unit2_pathway2_lemonade" />
           </set>
         </option>

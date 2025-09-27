@@ -67,16 +67,13 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Hiển thị xúc xắc dựa trên result
         Image(
             painter = painterResource(imageResource),
             contentDescription = result.toString()
         )
 
-        // Thêm khoảng cách giữa Image và Button
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Nút Roll để random xúc xắc
         Button(onClick = { result = (1..6).random() }) {
             Text(stringResource(R.string.roll))
         }
