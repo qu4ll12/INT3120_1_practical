@@ -50,6 +50,9 @@
       <SelectionState runConfigName="unit3_pathway3_woofapp">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="unit3_pathway3_superheroes">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
