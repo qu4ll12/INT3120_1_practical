@@ -68,6 +68,9 @@
       <SelectionState runConfigName="unit4_pathway1_unscramble">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="unit4_pathway2_cupcake">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
