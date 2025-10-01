@@ -52,7 +52,9 @@ fun SelectOptionScreen(
     subtotal: String,
     options: List<String>,
     onSelectionChanged: (String) -> Unit = {},
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onNextButtonClicked: () -> Unit,
+    onCancelButtonClicked: () -> Unit
 ) {
     var selectedValue by rememberSaveable { mutableStateOf("") }
 
@@ -128,7 +130,7 @@ fun SelectOptionPreview() {
         SelectOptionScreen(
             subtotal = "299.99",
             options = listOf("Option 1", "Option 2", "Option 3", "Option 4"),
-            modifier = Modifier.fillMaxHeight()
+            modifier = Modifier.fillMaxHeight(),
         )
     }
 }

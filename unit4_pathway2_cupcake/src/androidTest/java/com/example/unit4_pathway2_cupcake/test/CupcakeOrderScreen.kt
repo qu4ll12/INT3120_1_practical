@@ -22,11 +22,11 @@ import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import com.example.cupcake.ui.SelectOptionScreen
 import com.example.unit4_pathway2_cupcake.R
 import com.example.unit4_pathway2_cupcake.data.DataSource
 import com.example.unit4_pathway2_cupcake.data.OrderUiState
 import com.example.unit4_pathway2_cupcake.ui.OrderSummaryScreen
-import com.example.unit4_pathway2_cupcake.ui.SelectOptionScreen
 import com.example.unit4_pathway2_cupcake.ui.StartOrderScreen
 import org.junit.Rule
 import org.junit.Test
@@ -59,7 +59,6 @@ class CupcakeOrderScreenTest {
         composeTestRule.setContent {
             StartOrderScreen(
                 quantityOptions = DataSource.quantityOptions,
-                onNextButtonClicked = {}
             )
         }
 
@@ -82,7 +81,7 @@ class CupcakeOrderScreenTest {
 
         // When SelectOptionScreen is loaded
         composeTestRule.setContent {
-            SelectOptionScreen(subtotal = subtotal, options = flavors)
+            SelectOptionScreen(subtotal = subtotal, options = flavors,)
         }
 
         // Then all the options are displayed on the screen.
@@ -115,7 +114,7 @@ class CupcakeOrderScreenTest {
 
         // When SelectOptionScreen is loaded
         composeTestRule.setContent {
-            SelectOptionScreen(subtotal = subTotal, options = flavours)
+            SelectOptionScreen(subtotal = subTotal, options = flavours,)
         }
 
         // And one option is selected
@@ -134,10 +133,8 @@ class CupcakeOrderScreenTest {
         // When Summary Screen is loaded
         composeTestRule.setContent {
             OrderSummaryScreen(
-                orderUiState = fakeOrderUiState,
-                onCancelButtonClicked = {},
-                onSendButtonClicked = { _, _ -> },
-            )
+                orderUiState = fakeOrderUiState,,
+            ) {}
         }
 
         // Then the UI is updated correctly.

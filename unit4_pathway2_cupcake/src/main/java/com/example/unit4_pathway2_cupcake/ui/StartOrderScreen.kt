@@ -49,7 +49,8 @@ import com.example.unit4_pathway2_cupcake.ui.theme.CupcakeTheme
 @Composable
 fun StartOrderScreen(
     quantityOptions: List<Pair<Int, Int>>,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onNextButtonClicked: () -> Unit
 ) {
     Column(
         modifier = modifier,
@@ -116,7 +117,7 @@ fun StartOrderPreview() {
             quantityOptions = DataSource.quantityOptions,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(dimensionResource(R.dimen.padding_medium))
+                .padding(dimensionResource(R.dimen.padding_medium)),
         )
     }
 }

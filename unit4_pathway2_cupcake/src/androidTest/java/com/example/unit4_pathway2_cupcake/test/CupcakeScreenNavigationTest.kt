@@ -24,8 +24,8 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
-import com.example.unit4_pathway2_cupcake.unit4_pathway2_cupcakeApp
-import com.example.unit4_pathway2_cupcake.unit4_pathway2_cupcakeScreen
+import com.example.unit4_pathway2_cupcake.CupcakeScreen
+import com.example.unit4_pathway2_cupcake.CupcakeApp
 import com.example.unit4_pathway2_cupcake.R
 import org.junit.Before
 import org.junit.Rule
