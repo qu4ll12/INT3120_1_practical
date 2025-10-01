@@ -164,6 +164,7 @@ private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: I
     val shareIntent = Intent.createChooser(sendIntent, null)
 
     try {
+        @Suppress("DEPRECATION")
         ContextCompat.startActivity(intentContext, shareIntent, null)
     } catch (e: ActivityNotFoundException) {
         Toast.makeText(
