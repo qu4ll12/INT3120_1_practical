@@ -1,5 +1,6 @@
 package com.example.unit4_pathway1_unscramble.ui
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -36,6 +37,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.unit4_pathway1_unscramble.R
+import androidx.compose.runtime.getValue
+import com.example.unit4_pathway1_unscramble.ui.theme.UnscrambleTheme
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun GameScreen(gameViewModel: GameViewModel = viewModel()) {
@@ -195,12 +200,14 @@ fun GameLayout(
 /*
  * Creates and shows an AlertDialog with final score.
  */
+@SuppressLint("ContextCastToActivity")
 @Composable
 private fun FinalScoreDialog(
     score: Int,
     onPlayAgain: () -> Unit,
     modifier: Modifier = Modifier.Companion
 ) {
+
     val activity = (LocalContext.current as Activity)
 
     AlertDialog(
