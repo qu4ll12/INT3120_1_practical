@@ -20,7 +20,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Mobile Homework"
-include(":app")
 include(":unit1_pathway2_firstandroidapp")
 include(":unit1_pathway3_happybirthday")
 include(":unit1_pathway3_composearticle")
@@ -39,3 +38,4 @@ include(":unit4_pathway1_unscramble")
 include(":unit4_pathway2_cupcake")
 include(":unit4_pathway2_lunchtray")
 include(":unit4_pathway3_reply")
+include(":unit4_pathway3_sports")

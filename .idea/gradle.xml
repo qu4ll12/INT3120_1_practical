@@ -10,7 +10,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/unit1_pathway2_firstandroidapp" />
             <option value="$PROJECT_DIR$/unit1_pathway3_businessapp" />
             <option value="$PROJECT_DIR$/unit1_pathway3_composearticle" />
@@ -29,6 +28,7 @@
             <option value="$PROJECT_DIR$/unit4_pathway2_cupcake" />
             <option value="$PROJECT_DIR$/unit4_pathway2_lunchtray" />
             <option value="$PROJECT_DIR$/unit4_pathway3_reply" />
+            <option value="$PROJECT_DIR$/unit4_pathway3_sports" />
           </set>
         </option>
       </GradleProjectSettings>
