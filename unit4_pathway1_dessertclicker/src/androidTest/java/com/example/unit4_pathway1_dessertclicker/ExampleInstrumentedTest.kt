@@ -1,10 +1,12 @@
-package com.example.unit3_pathway3_woofapp
+package com.example.unit4_pathway1_dessertclicker
 
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import org.junit.Assert.assertEquals
+import androidx.test.ext.junit.runners.AndroidJUnit4
+
 import org.junit.Test
 import org.junit.runner.RunWith
+
+import org.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -17,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.unit3_pathway3_woofapp", appContext.packageName)
+        assertEquals("com.example.unit4_pathway1_dessertclicker", appContext.packageName)
     }
 }
