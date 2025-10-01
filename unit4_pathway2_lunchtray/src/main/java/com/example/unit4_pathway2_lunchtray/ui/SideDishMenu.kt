@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.example.unit4_pathway2_lunchtray.ui
+
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -33,6 +35,7 @@ fun SideDishMenuScreen(
     onSelectionChanged: (SideDishItem) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    @Suppress("UNCHECKED_CAST")
     BaseMenuScreen(
         options = options,
         onCancelButtonClicked = onCancelButtonClicked,

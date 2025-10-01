@@ -74,6 +74,9 @@
       <SelectionState runConfigName="unit4_pathway2_lunchtray">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="unit4_pathway3_reply">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>

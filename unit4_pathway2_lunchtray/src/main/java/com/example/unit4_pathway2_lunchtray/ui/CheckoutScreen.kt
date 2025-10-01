@@ -37,7 +37,6 @@ import com.example.unit4_pathway2_lunchtray.R
 import com.example.unit4_pathway2_lunchtray.datasource.DataSource
 import com.example.unit4_pathway2_lunchtray.model.MenuItem
 import com.example.unit4_pathway2_lunchtray.model.OrderUiState
-import formatPrice
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.DividerDefaults
 

@@ -49,8 +49,7 @@ import com.example.unit4_pathway2_cupcake.ui.theme.CupcakeTheme
 @Composable
 fun StartOrderScreen(
     quantityOptions: List<Pair<Int, Int>>,
-    modifier: Modifier = Modifier,
-    onNextButtonClicked: () -> Unit
+    modifier: Modifier = Modifier
 ) {
     Column(
         modifier = modifier,

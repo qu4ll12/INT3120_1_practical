@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.cupcake.ui
+package com.example.unit4_pathway2_cupcake.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.Button
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
@@ -39,6 +40,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.unit4_pathway2_cupcake.R
 import com.example.unit4_pathway2_cupcake.ui.components.FormattedPriceLabel
 import com.example.unit4_pathway2_cupcake.ui.theme.CupcakeTheme
+import androidx.compose.material3.DividerDefaults
 
 /**
  * Composable that displays the list of items as [RadioButton] options,
@@ -131,6 +133,8 @@ fun SelectOptionPreview() {
             subtotal = "299.99",
             options = listOf("Option 1", "Option 2", "Option 3", "Option 4"),
             modifier = Modifier.fillMaxHeight(),
+            onNextButtonClicked = {},
+            onCancelButtonClicked = {}
         )
     }
 }

@@ -51,7 +51,7 @@ import com.example.unit4_pathway2_cupcake.data.OrderUiState
 import com.example.unit4_pathway2_cupcake.ui.OrderSummaryScreen
 import com.example.unit4_pathway2_cupcake.ui.OrderViewModel
 import com.example.unit4_pathway2_cupcake.ui.StartOrderScreen
-import com.example.cupcake.ui.SelectOptionScreen
+import com.example.unit4_pathway2_cupcake.ui.SelectOptionScreen
 
 /**
  * enum values that represent the screens in the app
@@ -127,10 +127,6 @@ fun CupcakeApp(
             composable(route = CupcakeScreen.Start.name) {
                 StartOrderScreen(
                     quantityOptions = DataSource.quantityOptions,
-                    onNextButtonClicked = {
-                        viewModel.setQuantity(it)
-                        navController.navigate(CupcakeScreen.Flavor.name)
-                    },
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(dimensionResource(R.dimen.padding_medium))
