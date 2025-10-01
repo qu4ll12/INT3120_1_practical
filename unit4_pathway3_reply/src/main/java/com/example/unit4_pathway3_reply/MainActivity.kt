@@ -70,9 +70,7 @@ class MainActivity : ComponentActivity() {
 fun ReplyAppCompactPreview() {
     ReplyTheme {
         Surface {
-            ReplyApp(
-                windowSize = WindowWidthSizeClass.Compact,
-            )
+            ReplyApp(windowSize = WindowWidthSizeClass.Expanded)
         }
     }
 }
