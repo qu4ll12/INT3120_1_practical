@@ -52,10 +52,8 @@ import com.example.unit4_pathway2_cupcake.ui.OrderSummaryScreen
 import com.example.unit4_pathway2_cupcake.ui.OrderViewModel
 import com.example.unit4_pathway2_cupcake.ui.StartOrderScreen
 import com.example.unit4_pathway2_cupcake.ui.SelectOptionScreen
+import androidx.compose.material.icons.filled.ArrowBack
 
-/**
- * enum values that represent the screens in the app
- */
 enum class CupcakeScreen(@StringRes val title: Int) {
     Start(title = R.string.app_name),
     Flavor(title = R.string.choose_flavor),
@@ -66,7 +64,7 @@ enum class CupcakeScreen(@StringRes val title: Int) {
 /**
  * Composable that displays the topBar and displays back button if back navigation is possible.
  */
-@OptIn(ExperimentalMaterial3Api::class)
+@ExperimentalMaterial3Api
 @Composable
 fun CupcakeAppBar(
     currentScreen: CupcakeScreen,
@@ -93,6 +91,7 @@ fun CupcakeAppBar(
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CupcakeApp(
     viewModel: OrderViewModel = viewModel(),
@@ -127,6 +126,10 @@ fun CupcakeApp(
             composable(route = CupcakeScreen.Start.name) {
                 StartOrderScreen(
                     quantityOptions = DataSource.quantityOptions,
+                    onNextButtonClicked = {
+                        viewModel.setQuantity(it)
+                        navController.navigate(CupcakeScreen.Flavor.name)
+                    },
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(dimensionResource(R.dimen.padding_medium))

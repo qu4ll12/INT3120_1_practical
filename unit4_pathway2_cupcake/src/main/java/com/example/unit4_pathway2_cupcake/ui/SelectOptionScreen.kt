@@ -42,20 +42,14 @@ import com.example.unit4_pathway2_cupcake.ui.components.FormattedPriceLabel
 import com.example.unit4_pathway2_cupcake.ui.theme.CupcakeTheme
 import androidx.compose.material3.DividerDefaults
 
-/**
- * Composable that displays the list of items as [RadioButton] options,
- * [onSelectionChanged] lambda that notifies the parent composable when a new value is selected,
- * [onCancelButtonClicked] lambda that cancels the order when user clicks cancel and
- * [onNextButtonClicked] lambda that triggers the navigation to next screen
- */
 @Composable
 fun SelectOptionScreen(
     subtotal: String,
     options: List<String>,
     onSelectionChanged: (String) -> Unit = {},
-    modifier: Modifier = Modifier,
-    onNextButtonClicked: () -> Unit,
-    onCancelButtonClicked: () -> Unit
+    onCancelButtonClicked: () -> Unit = {},
+    onNextButtonClicked: () -> Unit = {},
+    modifier: Modifier = Modifier
 ) {
     var selectedValue by rememberSaveable { mutableStateOf("") }
 
@@ -86,9 +80,9 @@ fun SelectOptionScreen(
                 }
             }
             HorizontalDivider(
-                Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium)),
-                dimensionResource(R.dimen.thickness_divider),
-                DividerDefaults.color
+                modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium)),
+                thickness = dimensionResource(R.dimen.thickness_divider),
+                color = DividerDefaults.color
             )
             FormattedPriceLabel(
                 subtotal = subtotal,
@@ -109,7 +103,7 @@ fun SelectOptionScreen(
         ) {
             OutlinedButton(
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = onCancelButtonClicked
             ) {
                 Text(stringResource(R.string.cancel))
             }
@@ -117,12 +111,13 @@ fun SelectOptionScreen(
                 modifier = Modifier.weight(1f),
                 // the button is enabled when the user makes a selection
                 enabled = selectedValue.isNotEmpty(),
-                onClick = {}
+                onClick = onNextButtonClicked
             ) {
                 Text(stringResource(R.string.next))
             }
         }
     }
+
 }
 
 @Preview
@@ -132,9 +127,7 @@ fun SelectOptionPreview() {
         SelectOptionScreen(
             subtotal = "299.99",
             options = listOf("Option 1", "Option 2", "Option 3", "Option 4"),
-            modifier = Modifier.fillMaxHeight(),
-            onNextButtonClicked = {},
-            onCancelButtonClicked = {}
+            modifier = Modifier.fillMaxHeight()
         )
     }
 }

@@ -39,7 +39,7 @@ import com.example.unit4_pathway2_cupcake.data.OrderUiState
 import com.example.unit4_pathway2_cupcake.ui.components.FormattedPriceLabel
 import com.example.unit4_pathway2_cupcake.ui.theme.CupcakeTheme
 import androidx.compose.material3.DividerDefaults
-import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.platform.LocalContext
 
 /**
  * This composable expects [orderUiState] that represents the order state, [onCancelButtonClicked]
@@ -49,11 +49,11 @@ import androidx.compose.ui.platform.LocalResources
 @Composable
 fun OrderSummaryScreen(
     orderUiState: OrderUiState,
-    modifier: Modifier = Modifier,
     onCancelButtonClicked: () -> Unit,
-    onSendButtonClicked: (String, String) -> Unit
+    onSendButtonClicked: (String, String) -> Unit,
+    modifier: Modifier = Modifier
 ) {
-    val resources = LocalResources.current
+    val resources = LocalContext.current.resources
 
     val numberOfCupcakes = resources.getQuantityString(
         R.plurals.cupcakes,
@@ -91,9 +91,8 @@ fun OrderSummaryScreen(
                 Text(item.first.uppercase())
                 Text(text = item.second, fontWeight = FontWeight.Bold)
                 HorizontalDivider(
-                    Modifier,
-                    dimensionResource(R.dimen.thickness_divider),
-                    DividerDefaults.color
+                    thickness = dimensionResource(R.dimen.thickness_divider),
+                    color = DividerDefaults.color
                 )
             }
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_small)))
@@ -110,13 +109,13 @@ fun OrderSummaryScreen(
             ) {
                 Button(
                     modifier = Modifier.fillMaxWidth(),
-                    onClick = {}
+                    onClick = { onSendButtonClicked(newOrder, orderSummary) }
                 ) {
                     Text(stringResource(R.string.send))
                 }
                 OutlinedButton(
                     modifier = Modifier.fillMaxWidth(),
-                    onClick = {}
+                    onClick = onCancelButtonClicked
                 ) {
                     Text(stringResource(R.string.cancel))
                 }
@@ -131,9 +130,9 @@ fun OrderSummaryPreview() {
     CupcakeTheme {
         OrderSummaryScreen(
             orderUiState = OrderUiState(0, "Test", "Test", "$300.00"),
-            modifier = Modifier.fillMaxHeight(),
+            onSendButtonClicked = { subject: String, summary: String -> },
             onCancelButtonClicked = {},
-            onSendButtonClicked = { _, _ -> }
+            modifier = Modifier.fillMaxHeight()
         )
     }
 }
