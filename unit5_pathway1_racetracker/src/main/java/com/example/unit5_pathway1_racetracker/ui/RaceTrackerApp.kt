@@ -44,11 +44,6 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun RaceTrackerApp() {
-    /**
-     * Note: To survive the configuration changes such as screen rotation, [rememberSaveable] should
-     * be used with custom Saver object. But to keep the example simple, and keep focus on
-     * Coroutines that implementation detail is stripped out.
-     */
     val playerOne = remember {
         RaceParticipant(name = "Player 1", progressIncrement = 1)
     }
