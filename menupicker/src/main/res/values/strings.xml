@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">menupicker</string>
+    <string name="hello_xml_layout">Hello XML Layout!</string>
+    <string name="favourites">Favourites</string>
+    <string name="t_m_ki_m">Tìm kiếm</string>
+    <string name="setting">Setting</string>
+</resources>
