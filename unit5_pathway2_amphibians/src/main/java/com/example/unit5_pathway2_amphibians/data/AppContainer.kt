@@ -6,9 +6,6 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 
-/**
- * Dependency Injection container at the application level.
- */
 interface AppContainer {
     val amphibiansRepository: AmphibiansRepository
 }

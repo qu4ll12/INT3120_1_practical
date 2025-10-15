@@ -11,19 +11,22 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.unit5_pathway2_amphibians.ui.theme.MobileHomeworkTheme
+import com.example.unit5_pathway2_amphibians.ui.theme.AmphibiansTheme
+import com.example.unit5_pathway2_amphibians.ui.AmphibiansApp
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MobileHomeworkTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+            AmphibiansTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    AmphibiansApp()
                 }
             }
         }
@@ -41,7 +44,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    MobileHomeworkTheme {
-        Greeting("Android")
+    AmphibiansTheme {
+        AmphibiansApp()
     }
 }
