@@ -22,9 +22,6 @@ fun HomeScreen(
     ResultScreen(marsUiState, modifier.padding(top = contentPadding.calculateTopPadding()))
 }
 
-/**
- * ResultScreen displaying number of photos retrieved.
- */
 @Composable
 fun ResultScreen(photos: String, modifier: Modifier = Modifier) {
     Box(
