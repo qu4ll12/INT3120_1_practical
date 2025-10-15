@@ -89,6 +89,9 @@
       <SelectionState runConfigName="unit5_pathway1_racetracker">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="unit5_pathway1_marphotos">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
