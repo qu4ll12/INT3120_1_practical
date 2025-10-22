@@ -15,5 +15,5 @@
      limitations under the License.
 -->
 <resources>
-    <style name="Theme.DessertRelease" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.MobileHomework" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
