@@ -14,12 +14,14 @@
  * limitations under the License.
  */
 
-package com.example.unit7_pathway1_waterme.ui.theme
+package com.example.unit7_pathway1_waterme.data
 
-import androidx.compose.ui.graphics.Color
+import android.content.Context
 
-val md_theme_light_primary = Color(0xFF944A00)
-val md_theme_light_surfaceVariant = Color(0xFFF3DED2)
+interface AppContainer {
+    val waterRepository : WaterRepository
+}
 
-val md_theme_dark_primary = Color(0xFFFFB784)
-val md_theme_dark_surfaceVariant = Color(0xFF52443B)
+class DefaultAppContainer(context: Context) : AppContainer {
+    override val waterRepository = WorkManagerWaterRepository(context)
+}

@@ -14,12 +14,19 @@
  * limitations under the License.
  */
 
-package com.example.unit7_pathway1_waterme.ui.theme
+package com.example.unit7_pathway1_waterme.model
 
-import androidx.compose.ui.graphics.Color
+import android.os.Parcelable
+import androidx.annotation.StringRes
+import kotlinx.parcelize.Parcelize
 
-val md_theme_light_primary = Color(0xFF944A00)
-val md_theme_light_surfaceVariant = Color(0xFFF3DED2)
-
-val md_theme_dark_primary = Color(0xFFFFB784)
-val md_theme_dark_surfaceVariant = Color(0xFF52443B)
+/**
+ * Data class for representing the information required for each plant card.
+ * */
+@Parcelize
+data class Plant(
+    @StringRes val name: Int,
+    @StringRes val type: Int,
+    @StringRes val description: Int,
+    @StringRes val schedule: Int
+): Parcelable

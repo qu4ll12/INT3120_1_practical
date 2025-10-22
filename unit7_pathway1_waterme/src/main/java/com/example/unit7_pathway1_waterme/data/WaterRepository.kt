@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.example.unit7_pathway1_waterme.ui.theme
+package com.example.unit7_pathway1_waterme.data
 
-import androidx.compose.ui.graphics.Color
+import com.example.unit7_pathway1_waterme.model.Plant
+import java.util.concurrent.TimeUnit
 
-val md_theme_light_primary = Color(0xFF944A00)
-val md_theme_light_surfaceVariant = Color(0xFFF3DED2)
-
-val md_theme_dark_primary = Color(0xFFFFB784)
-val md_theme_dark_surfaceVariant = Color(0xFF52443B)
+interface WaterRepository {
+    fun scheduleReminder(duration: Long, unit: TimeUnit, plantName: String)
+    val plants: List<Plant>
+}

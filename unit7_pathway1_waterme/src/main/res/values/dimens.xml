@@ -15,6 +15,5 @@
     limitations under the License.
 -->
 <resources>
-
-    <style name="Theme.MobileHomework" parent="android:Theme.Material.Light.NoActionBar" />
+    <dimen name="padding_medium">16dp</dimen>
 </resources>
