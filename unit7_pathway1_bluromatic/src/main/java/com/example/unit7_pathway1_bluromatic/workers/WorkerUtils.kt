@@ -16,6 +16,7 @@
 
 package com.example.unit7_pathway1_bluromatic.workers
 
+import android.Manifest
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
@@ -23,6 +24,7 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
 import android.util.Log
+import androidx.annotation.RequiresPermission
 import androidx.annotation.WorkerThread
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -38,6 +40,7 @@ import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.IOException
 import java.util.UUID
+import androidx.core.graphics.scale
 
 private const val TAG = "WorkerUtils"
 
@@ -50,6 +53,7 @@ private const val TAG = "WorkerUtils"
  * @param message Message shown on the notification
  * @param context Context needed to create Toast
  */
+@RequiresPermission(Manifest.permission.POST_NOTIFICATIONS)
 fun makeStatusNotification(message: String, context: Context) {
 
     // Make a channel if necessary
@@ -89,13 +93,8 @@ fun makeStatusNotification(message: String, context: Context) {
  */
 @WorkerThread
 fun blurBitmap(bitmap: Bitmap, blurLevel: Int): Bitmap {
-    val input = Bitmap.createScaledBitmap(
-        bitmap,
-        bitmap.width/(blurLevel*5),
-        bitmap.height/(blurLevel*5),
-        true
-    )
-    return Bitmap.createScaledBitmap(input, bitmap.width, bitmap.height, true)
+    val input = bitmap.scale(bitmap.width / (blurLevel * 5), bitmap.height / (blurLevel * 5))
+    return input.scale(bitmap.width, bitmap.height)
 }
 
 /**

@@ -46,6 +46,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -65,6 +66,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.unit7_pathway1_bluromatic.R
 import com.example.unit7_pathway1_bluromatic.data.BlurAmount
 import com.example.unit7_pathway1_bluromatic.ui.theme.BluromaticTheme
+import androidx.core.net.toUri
 
 @Composable
 fun BluromaticScreen(blurViewModel: BlurViewModel = viewModel(factory = BlurViewModel.Factory)) {
@@ -101,7 +103,7 @@ fun BluromaticScreenContent(
     cancelWork: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    var selectedValue by rememberSaveable { mutableStateOf(1) }
+    var selectedValue by rememberSaveable { mutableIntStateOf(1) }
     val context = LocalContext.current
     Column(modifier = modifier) {
         Image(
@@ -191,7 +193,7 @@ private fun BlurAmountContent(
 
 private fun showBlurredImage(context: Context, currentUri: String) {
     val uri = if (currentUri.isNotEmpty()) {
-        Uri.parse(currentUri)
+        currentUri.toUri()
     } else {
         null
     }

@@ -27,10 +27,6 @@ import com.example.unit7_pathway1_bluromatic.data.BluromaticRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-/**
- * [BlurViewModel] starts and stops the WorkManger and applies blur to the image. Also updates the
- * visibility states of the buttons depending on the states of the WorkManger.
- */
 class BlurViewModel(private val bluromaticRepository: BluromaticRepository) : ViewModel() {
 
     internal val blurAmount = BlurAmountData.blurAmount

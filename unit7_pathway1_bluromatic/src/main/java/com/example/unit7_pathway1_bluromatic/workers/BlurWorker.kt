@@ -30,6 +30,7 @@ import com.example.unit7_pathway1_bluromatic.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
+import androidx.core.net.toUri
 
 private const val TAG = "BlurWorker"
 
@@ -59,7 +60,7 @@ class BlurWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx, 
                 val resolver = applicationContext.contentResolver
 
                 val picture = BitmapFactory.decodeStream(
-                    resolver.openInputStream(Uri.parse(resourceUri))
+                    resolver.openInputStream(resourceUri.toUri())
                 )
 
                 val output = blurBitmap(picture, blurLevel)

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.unit7_pathway1_bluromatic"
+    namespace = "com.example.unit7_pathway1_waterme"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.unit7_pathway1_bluromatic"
+        applicationId = "com.example.unit7_pathway1_waterme"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -40,8 +40,7 @@ android {
 }
 
 dependencies {
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
-    implementation("androidx.work:work-runtime-ktx:2.9.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

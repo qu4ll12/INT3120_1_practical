@@ -16,9 +16,6 @@
 
 package com.example.unit7_pathway1_bluromatic
 
-// Notification Channel constants
-
-// Name of Notification Channel for verbose notifications of background work
 val VERBOSE_NOTIFICATION_CHANNEL_NAME: CharSequence =
     "Verbose WorkManager Notifications"
 const val VERBOSE_NOTIFICATION_CHANNEL_DESCRIPTION =
