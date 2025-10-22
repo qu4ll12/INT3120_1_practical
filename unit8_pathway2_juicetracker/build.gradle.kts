@@ -2,26 +2,20 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("com.google.devtools.ksp") version "2.2.0-2.0.2"
 }
 
 android {
-    namespace = "com.example.unit8_pathway1_juicetracker"
+    namespace = "com.example.unit8_pathway2_juicetracker"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.unit8_pathway1_juicetracker"
+        applicationId = "com.example.unit8_pathway2_juicetracker"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildFeatures {
-        dataBinding = true
-        compose = true
     }
 
     buildTypes {
@@ -40,9 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-
     buildFeatures {
         dataBinding = true
+        compose = true
     }
 }
 
@@ -52,6 +46,9 @@ dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.11.0")
+    implementation("com.google.android.gms:play-services-base:18.5.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+    implementation("androidx.activity:activity-ktx:1.9.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -60,8 +57,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
