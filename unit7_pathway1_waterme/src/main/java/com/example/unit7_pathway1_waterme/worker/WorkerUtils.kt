@@ -32,7 +32,13 @@ import com.example.unit7_pathway1_waterme.R
 import com.example.unit7_pathway1_waterme.REQUEST_CODE
 import com.example.unit7_pathway1_waterme.VERBOSE_NOTIFICATION_CHANNEL_DESCRIPTION
 import com.example.unit7_pathway1_waterme.VERBOSE_NOTIFICATION_CHANNEL_NAME
+import android.util.Log
+import android.content.pm.PackageManager
+import androidx.core.app.ActivityCompat
+import android.Manifest
+import androidx.annotation.RequiresPermission
 
+@RequiresPermission(Manifest.permission.POST_NOTIFICATIONS)
 fun makePlantReminderNotification(
     message: String,
     context: Context
